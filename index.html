@@ -86,15 +86,15 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-	    <div data-date="June 2017 – March 2019">
+	        <div data-date="June 2017 – March 2019">
                 <h3>Large Federal contracing firm</h3>
-                	<h4>Principal SWE</h4>
-                		<p>
-                    			<li>Delivering automation focused solutions in missions critical environments</li>
-                		</p>
+                <h4>Principal SWE</h4>
+                	<p>
+                    	<li>Delivering automation focused solutions in missions critical environments</li>
+                	</p>
             </div>
 		
-            <div data-date="December 2020 – 2022">
+            <div data-date="December 2020 – December 2022">
                 <h3>Large Federal consulting firm</h3>
                 <h4>Consultant</h4>
                 <p>
@@ -148,9 +148,6 @@
                 <li>
                     Certified Information Systems Security Professional (CISSP)
                 </li>
-		<li>
-		     Azure Certified Security Engineer Associate
-                <li>
                     AWS Certified Solution Architect Associate
                 </li>
                 <li>
@@ -168,13 +165,32 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
+                        <img src="mesh.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Advanced Service Mesh</h3>
+                        <p>
+                            Originally I was faced with fragmented development teams, lack-of or blatently missing security standards such as TLS, and the risk of high-value data. First, I designed a network security architecture integrating traditional firewalls and a complex service mesh for Kubernetes. The resulting solution utilized Istio, k8s network policy, cert-manager, metal-lb, and GitLab pipelines to povide a zero-trust based service mesh as a packaged solution. 
+                            
+                            This solution and its supporting pipelines allowed dev teams to integrate their apps and services late in the development cycle and immediatly benefit from features such as mTLS, easy certi mgmt., and enhanced observability. All of these features provided without having to re-engineer exisitng application code. The result of this was met with client praise for supporting the timely deployment of critical capabilities and an award from corporate for a recognition of contriobutions to the customer.
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
                         <img src="images/DevLabs Diagram v1.0.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Automated Security Ops Testing Environment</h3>
                         <p>
-                            Recently I was tasked with creating an environment for security operations users to test potentially or kown malicious links, files, and other artifacts. I facillitated this by designing a small system in Azure leveraging a DevTest Labs account, an Azure Bastion Host, a Logic App, and ARM Templates. This environment allowed security users to perform their analysis quickly and have VMs re-launched automatically after bein compromised. A contained network, use of Azure features such as Bastion, Network Security groups, and basic netwoking concepts provide an environment completly seperated from our client's infrastructure. The environment is relitively low cost and can be launched via ARM template on the fly. 
+                            I was tasked with creating an environment for security operations users to test potentially or kown malicious links, files, and other artifacts. I facillitated this by designing a small system in Azure leveraging a DevTest Labs account, an Azure Bastion Host, a Logic App, and ARM Templates. This environment allowed security users to perform their analysis quickly and have VMs re-launched automatically after bein compromised. A contained network, use of Azure features such as Bastion, Network Security groups, and basic netwoking concepts provide an environment completly seperated from our client's infrastructure. The environment is relitively low cost and can be launched via ARM template on the fly. 
                         </p>
                     </div>
                     <!-- End .project-info -->

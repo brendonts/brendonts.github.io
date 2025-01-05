@@ -1,5 +1,14 @@
 /*!
-    Title: resume CSS
+    Title: Dev Portfolio Template
+    Version: 1.2.0
+    Last Change: 05/20/17
+    Author: Ryan Fitzgerald
+    Repo: https://github.com/RyanFitzgerald/devportfolio-template
+    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+
+    Description: This file contains all the styles associated with the page
+    that don't come from third party libraries. This file gets compiled using
+    Gulp and send to the /css folder which is then loaded on the page.
 */
 /*
     File Contents:
@@ -633,10 +642,9 @@ footer {
 }
 
 .project {
-    display: flex;
-    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
-    align-items: center; /* Vertically aligns image and text */
-    margin-bottom: 30px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
@@ -644,11 +652,6 @@ footer {
 
 .project-image {
     float: left;
-    max-width: 100%; /* Ensures the image does not exceed its container */
-    height: auto;    /* Maintains the aspect ratio of the image */
-    object-fit: cover; /* Scales the image proportionally (adjust as needed) */
-    margin-right: 15px; /* Adds some spacing to avoid overlapping with text */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Optional: adds shadow for better visibility */
 }
 
 .project-info {
@@ -659,21 +662,16 @@ footer {
     padding: 15px;
 
     h3 {
-        font-size: 1.6em; /* Slightly larger for better hierarchy */
-        font-weight: 500; /* Medium weight for a clean look */
-        color: #374054; /* Matches the base heading color */
-        margin: 0 0 10px 0; /* Adds spacing below the heading */
-        line-height: 1.4; /* Improves readability */
-        text-transform: capitalize; /* Optional: capitalize the first letter of each word */
+        font-size: 1.5em;
+        font-weight: 300;
+        color: $heading;
+        margin: 0 0 15px 0;
     }
 
     p {
-        font-size: 1em; /* Standard paragraph size */
-        font-weight: 300; /* Light font for subtlety */
-        color: #74808a; /* Matches the base text color */
-        margin: 0 0 15px 0; /* Adds spacing below the paragraph */
-        line-height: 1.6; /* Enhances readability with better spacing */
-        text-align: justify; /* Optional: Align text to both edges */
+        color: $text;
+        margin: 0 0 15px 0;
+        font-size: 0.9em;
     }
 }
 
@@ -835,7 +833,7 @@ footer {
 */
 
 // Collapse timeline
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 750px) {
 
     #experience-timeline {
         &:before, &:after {
@@ -861,25 +859,6 @@ footer {
         margin-left: 70px;
     }
 
-    .project-info {
-        position: relative; /* Adjusts positioning for smaller screens */
-        margin-left: 0; /* Resets the margin */
-        top: auto;
-        transform: none; /* Removes transform */
-        text-align: center; /* Centers the content for better layout */
-
-        h3 {
-            font-size: 1.4em; /* Reduced size for smaller screens */
-            margin: 0 0 8px 0; /* Adjust spacing */
-        }
-
-        p {
-            font-size: 0.9em; /* Slightly smaller for paragraphs */
-            line-height: 1.4; /* Adjusted for readability */
-            text-align: center; /* Centers text for uniformity */
-            margin: 0 0 10px 0; /* Adjust spacing */
-        }
-    }
 }
 
 // Medium Devices

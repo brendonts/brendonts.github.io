@@ -1,7 +1,8 @@
 /*!
-    Fully updated styles.css with added compatibility
+    Fully updated styles.css for proper project image scaling and responsiveness
 */
 
+/* Global Styles */
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -12,23 +13,33 @@ body.active {
     z-index: -1;
 }
 
-/* Updated .project-image */
+/* Project Styles */
+.project {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    display: flex; /* Ensures flexbox layout for proper alignment */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    align-items: center; /* Aligns items vertically */
+}
+
 .project-image {
-    float: left;
+    flex: 1; /* Takes up equal space with .project-info */
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    margin-right: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0; /* Removes any additional margins */
+    display: block;
+    border-radius: 4px 0 0 4px; /* Optional: rounded corners */
 }
 
-/* Updated .project-info */
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    flex: 1;
     padding: 15px;
+    text-align: left;
 }
 
 .project-info h3 {
@@ -36,8 +47,6 @@ body.active {
     font-weight: 500;
     color: #374054;
     margin: 0 0 10px 0;
-    line-height: 1.4;
-    text-transform: capitalize;
 }
 
 .project-info p {
@@ -46,79 +55,22 @@ body.active {
     color: #74808a;
     margin: 0 0 15px 0;
     line-height: 1.6;
-    text-align: justify;
 }
 
-@keyframes dropHeader {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
+/* Responsive Styles */
 @media only screen and (max-width: 768px) {
-    header {
-        position: fixed;
-        display: none;
-        z-index: 999;
-        animation: none;
-        bottom: 0;
-        height: 100%;
+    .project {
+        flex-direction: column; /* Stacks image and info vertically */
     }
 
-    #mobile-menu-open, #mobile-menu-close {
-        display: block;
-    }
-
-    #menu {
-        height: 100%;
-        overflow-y: auto;
-        box-shadow: none;
-        border-radius: 0;
-        width: 100%;
-    }
-
-    #menu li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    #lead-content h1 {
-        font-size: 2em;
-    }
-
-    #lead-content h2 {
-        font-size: 1.3em;
-    }
-
-    #lead-content a {
-        padding: 10px 20px;
-    }
-
-    #lead-down {
-        display: none;
-    }
-
-    .education-block h3, .education-block span {
-        float: none;
-    }
-
-    /* Updated .project-image for smaller screens */
     .project-image {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto 15px auto;
+        max-width: 100%; /* Ensures it stays responsive */
+        margin: 0 auto 15px auto; /* Centers the image and adds spacing */
     }
 
-    /* Updated .project-info for smaller screens */
     .project-info {
-        position: relative;
-        margin-left: 0;
-        top: auto;
-        transform: none;
-        text-align: center;
+        text-align: center; /* Centers the text for smaller screens */
+        padding: 15px;
     }
 
     .project-info h3 {
@@ -129,10 +81,15 @@ body.active {
     .project-info p {
         font-size: 0.9em;
         line-height: 1.4;
-        text-align: center;
-        margin: 0 0 10px 0;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    #lead-c
+    .project-info h3 {
+        font-size: 1.2em;
+    }
+
+    .project-info p {
+        font-size: 0.8em;
+    }
+}

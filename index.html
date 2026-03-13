@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Personal Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-logo">YN</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Your Name</h1>
+      <p class="hero-title">Software Engineer &amp; Builder</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Building systems that <span class="accent">matter</span>.</h2>
+          <p>
+            I'm a software engineer focused on crafting high-performance applications
+            and elegant user experiences. I bring rigorous thinking and clean code to
+            every problem I touch.
+          </p>
+          <p>
+            Currently open to new opportunities. Based in [Your City].
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-label">02 / Skills</div>
+      <h2>What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">&#10022;</div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>React / Next.js</li>
+            <li>TypeScript</li>
+            <li>CSS / Tailwind</li>
+            <li>WebGL / Canvas</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#10022;</div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js / Python</li>
+            <li>REST &amp; GraphQL</li>
+            <li>PostgreSQL / Redis</li>
+            <li>Docker / K8s</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#10022;</div>
+          <h3>Systems</h3>
+          <ul>
+            <li>Linux / Shell</li>
+            <li>AWS / GCP</li>
+            <li>CI/CD Pipelines</li>
+            <li>Performance Tuning</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#10022;</div>
+          <h3>Data</h3>
+          <ul>
+            <li>Data Pipelines</li>
+            <li>Pandas / NumPy</li>
+            <li>Visualization</li>
+            <li>ML Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">03 / Projects</div>
+      <h2>Selected Work</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-num">001</div>
+          <h3>Project Alpha</h3>
+          <p>A real-time data dashboard that processes millions of events per second with sub-50ms latency.</p>
+          <div class="project-tags">
+            <span>React</span><span>Go</span><span>Kafka</span>
+          </div>
+          <a href="#" class="project-link">View &rarr;</a>
+        </div>
+        <div class="project-card">
+          <div class="project-num">002</div>
+          <h3>Project Beta</h3>
+          <p>An open-source CLI toolkit for automating infrastructure deployments with a clean DSL.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Terraform</span><span>AWS</span>
+          </div>
+          <a href="#" class="project-link">View &rarr;</a>
+        </div>
+        <div class="project-card">
+          <div class="project-num">003</div>
+          <h3>Project Gamma</h3>
+          <p>A collaborative code editor with WebSocket-powered operational transform and syntax highlighting.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>WebSockets</span><span>Redis</span>
+          </div>
+          <a href="#" class="project-link">View &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+      <div class="section-label">04 / Contact</div>
+      <h2>Let's Work Together</h2>
+      <p class="contact-sub">Have a project in mind or want to chat? Reach out.</p>
+      <a href="mailto:you@email.com" class="btn btn-primary btn-large">
+        you@email.com
+      </a>
+      <div class="social-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span>&copy; 2026 Your Name. Built with intention.</span>
+  </footer>
+
+  <script src="animation.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

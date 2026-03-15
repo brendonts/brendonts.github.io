@@ -39,6 +39,24 @@
     revealObserver.observe(el);
   });
 
+  // ─── Hamburger menu ─────────────────────────────────────────────────────────
+  const hamburger = document.querySelector(".nav-hamburger");
+  const navList = document.querySelector(".nav-links");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      navbar.classList.toggle("nav-open");
+      navList.classList.toggle("open");
+    });
+
+    navList.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navbar.classList.remove("nav-open");
+        navList.classList.remove("open");
+      });
+    });
+  }
+
   // ─── Active nav link on scroll ──────────────────────────────────────────────
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-links a");

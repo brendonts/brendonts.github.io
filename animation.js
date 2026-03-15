@@ -37,6 +37,13 @@
     maxEdges: 3,            // max connections drawn per node
   };
 
+  // Reduce load on mobile
+  if (window.innerWidth < 768) {
+    CFG.nodeCount = 40;
+    CFG.connectDist = 120;
+    CFG.hexGridOpacity = 0.025;
+  }
+
   // ─── State ────────────────────────────────────────────────────────────────────
   let W, H, dpr;
   let nodes = [];

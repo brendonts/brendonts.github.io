@@ -587,6 +587,39 @@ footer {
   transform: translateY(0);
 }
 
+/* ─── Hamburger button ───────────────────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 201;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-dim);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Hamburger → X when nav is open */
+#navbar.nav-open .nav-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#navbar.nav-open .nav-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#navbar.nav-open .nav-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .skills-grid {
@@ -609,17 +642,77 @@ footer {
   }
 }
 
+/* iOS Safari: background-attachment:fixed causes blank bg — switch to scroll */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 600px) {
+  /* Nav */
   #navbar {
     padding: 1rem 1.25rem;
+    transition: background 0.3s, height 0.3s;
+  }
+  #navbar.nav-open {
+    height: 100vh;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: rgba(4, 7, 15, 0.97);
+  }
+  .nav-hamburger {
+    display: flex;
   }
   .nav-links {
-    gap: 1.25rem;
+    display: none;
   }
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .nav-links a {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--text);
+  }
+
+  /* Layout */
   .skills-grid {
     grid-template-columns: 1fr;
   }
   .section-inner {
     padding: 4.5rem 1.25rem;
+  }
+
+  /* About stats: 2×2 grid instead of cramped row */
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    justify-content: unset;
+  }
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  /* Contact email button: allow text to wrap */
+  .btn-large {
+    text-align: center;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  /* Hide scroll hint — mobile users swipe intuitively */
+  .hero-scroll-hint {
+    display: none;
   }
 }
